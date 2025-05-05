@@ -52,16 +52,45 @@
 					<div id="main">
 						<div class="inner">
 							<h1>About the project</h1>
-							<h3>Game Setup</h3>
+							<h2>Game Setup</h2>
 							<p>Our game is set up in a Model View Controller (MVC) archetecture.</p>
-							<h5>Model</h5>
+							<h3>Model</h3>
+							<p>The model is made up of 5 different classes, 4 representing sub components of the game elements. <br>
+								<b>PlayerDetails and ComputerDetails:</b> Each contain the same methods, tracking whose turn it is, their personal hand of cards, and if they called uno or not, and if they have declared uno out to win <br>
+								<b>Card:</b> Holds the information any UNO card would have, its color, its value, and if it has a special function what it does in the game <br>
+								<b>Deck:</b> Stores variables on all the decks used in the game, the main one, the one of played cards, and the players personal hands <br>
+								<b>UNOMODEL:</b> Holds the rules, turn operation, win condition, and other little details involved in an UNO game <br>
+								</p>
+							<h3>View</h3>
+							<p>The View class renders the game interface using pygame, handling all visual feedback the player sees. It creates the display window, draws elements including action buttons and cards. <br>
+								<b>Window & UI Setup:</b> Initializes the screen, sets dimensions, colors, and fonts. <br>
+								<b>Card Rendering:</b> Load and display card images from a spreadsheet, including the player’s hand and top card on the pile. <br>
+								<b>Functions:</b>
+								<ul>
+									<li><b>draw_buttons():</b> Draws the game control buttons</li>
+									<li><b>load_card_images():</b> Loads card visuals based on spreadsheet</li>
+									<li><b>draw_player_hand():</b> Displays hand using images</li>
+									<li><b>draw_top_card():</b> Shows last played card</li>
+								</ul>
+							</p>
+							<h3>Controller</h3>
 							<p>insert text here</p>
-							<h5>View</h5>
-							<p>insert text here</p>
-							<h5>Controller</h5>
-							<p>insert text here</p>
+
 							<h3>How to Play</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
+							<p><strong>Your goal is to get to 0 cards before your opponent--the computer--does.</strong><br>
+								<ol>
+									<li>You will be dealt a hand of 7 cards from the main draw deck. After cards are drawn one card from the draw deck will be left face up to start the played card deck.</li>
+									<li>On your turn you need to pick a card from your hand that matches either the color, number, or symbol, of the top card in the played cards deck. You will only have 30 seconds to pick what card to play.</li>
+									<li>If you have no cards in your hand that you can play you must use your turn to pick a card from the draw deck.</li>
+									<li>When you have one card left press the UNO button as fast as you can</li>
+									<li>When you are down to 0 cards press the UNO OUT button to win!</li>
+								</ol>
+
+								<strong>Special note: Action Cards:</strong> <br>
+								<i>There are 2 action cards in the game which cause a special effect.</i> The <u>Plus Cards</u> (which will have a +2 symbol) when played cause the opposite player to have to draw 2 cards from the deck at the start of their turn. If a +2 card is played on you,
+								 you can play another +2 and your opponent will have to draw 4 cards because plus cards add up over time.
+								 The <u>Wild Cards</u> allow the person who played that card to pick what color that card will be and cards played after the wild card will have to match that picked color.
+							</p>
 						</div>
 					</div>
 
